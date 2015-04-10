@@ -16,7 +16,7 @@ The Solver contains three main parts
 
 3. The initial alignment is: All Queens are in the (i,i) diagnol. But,  you can customize it in the NQSolver class under the function named: buildInitial
 
-4.The approach used in this solver is :simulate annealing. The probability of accepting wrose state satisfies boltzman distribution. 
+4. The approach used in this solver is :simulate annealing. The probability of accepting wrose state satisfies boltzman distribution. 
 
 5. The score of each state is calculated as the number of Queen conflicts. (1 point for 1 conflict)
 
