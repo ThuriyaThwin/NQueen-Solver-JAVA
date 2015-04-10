@@ -1,4 +1,4 @@
-# NQueen-Slover
+# NQueen-Solver
 
 NQueen-Solver, you are, here, granted the permission to use the N queen solver freely.
 
