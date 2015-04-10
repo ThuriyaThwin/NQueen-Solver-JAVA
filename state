@@ -57,7 +57,45 @@ public class state {
 		}
 		
 		this.Score=score;
+		public int getOneQueenScore(Queen q){
 		
+		int score=0;
+		
+		score+=getSameRowConflict(q);
+		score+=getSameColumnConflict(q);
+		score+=getDiagonalConflict(q);
+		
+		return score;
+	}
+	public int getSameRowConflict(Queen q){
+		int score=0;
+		int qx=q.location.x;
+		
+		for(Queen qq:this.config){
+			if(!q.equal(qq)){
+				if(qq.location.x==qx){
+					//System.out.println(q+" conflicts with "+qq+"in row");
+					score++;
+				}
+			}
+		}
+		return score;
+	}
+	public int getSameColumnConflict(Queen q){
+		int score=0;
+		int qy=q.location.y;
+		
+		for(Queen qq:this.config){
+			if(!q.equal(qq)){
+				if(qq.location.y==qy){
+					//System.out.println(q+" conflicts with "+qq+"in column");
+					score++;
+				}
+			}
+		}
+		return score;
+	}
+	
 
 	public int  getDiagonalConflict(Queen q){
 		
