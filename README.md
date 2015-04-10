@@ -3,7 +3,7 @@
 NQueen-Solver, you are, here, granted the permission to use the N queen solver freely.
 
 The Solver contains three main parts
-1. basic object classese
+1. basic object classes:
    a. Queen
    b. state
    c. point
