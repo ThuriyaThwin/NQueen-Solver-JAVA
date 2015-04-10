@@ -13,3 +13,8 @@ The Solver contains three main parts
 3. You can use the solver to solve the N-queen problem within a test class. The N is a inital parameter for using the solver.
 
 4. The initial alignment is: All Queens are in the (i,i) diagnol. But,  you can customize it in the NQSolver class under the function named: buildInitial
+
+5. If the inital diagonal alignment is fine for you, just do 
+
+      NQSolver nq=new NQSovler (N);
+      nq.findGoal();
