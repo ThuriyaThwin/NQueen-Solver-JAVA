@@ -81,6 +81,29 @@ public class state {
 		}
 		return score;
 	}
+	public void removeByIndex(int index){
+		
+		state ref=new state(this.limit);
+		ref.setConfig(this.config);
+		
+		for(Queen q:ref.config){
+			
+			if(q.index==index){
+				
+				this.config.remove(q);
+			}
+		}
+	}
+	public int getOneQueenScore(Queen q){
+		
+		int score=0;
+		
+		score+=getSameRowConflict(q);
+		score+=getSameColumnConflict(q);
+		score+=getDiagonalConflict(q);
+		
+		return score;
+	}
 	public int getSameColumnConflict(Queen q){
 		int score=0;
 		int qy=q.location.y;
